@@ -1,6 +1,7 @@
 "use client";
 import React, { useCallback, useRef, useState } from "react";
 import { motion, useAnimate, stagger } from "framer-motion";
+import Link from "next/link";
 
 export default function Menu({
   position = "right",
@@ -363,7 +364,7 @@ export default function Menu({
                       className="sm-panel-itemWrap relative overflow-hidden leading-none"
                       key={it.label + idx}
                     >
-                      <a
+                      <Link
                         className="sm-panel-item relative text-[#1a1a1a] font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
                         href={it.link}
                         aria-label={it.ariaLabel}
@@ -375,7 +376,7 @@ export default function Menu({
                         >
                           {it.label}
                         </motion.span>
-                      </a>
+                      </Link>
                     </li>
                   ))
                 ) : (

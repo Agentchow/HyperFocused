@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import { VisionSvg, VentureSvg } from "../../../helpers/icons";
 import TitleCard from "@/components/TitleCard";
+import Section from "@/components/ui/section";
 
 export const metadata = {
   title: "About | Hyperfocused Holdings",
@@ -73,7 +74,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-c-black text-white rounded-t-3xl">
+      <Section bgClass="bg-c-black text-white rounded-t-3xl" noTop>
         <TitleCard
           title="Our Mission"
           titleClassName="text-white/60"
@@ -81,6 +82,27 @@ export default function AboutPage() {
           descriptionClassName="text-white/40"
           tagline="THE FUTURE"
         />
+        {/* Firm Highlights */}
+        <div className="grid-system mt-6">
+          <div className="col-span-full md:col-start-2 md:col-end-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: "AUM", value: "$120M" },
+              { label: "Platforms / Add-ons", value: "12 / 34" },
+              { label: "Net IRR (Fund I)", value: "19.4%" },
+              { label: "TVPI (Fund I)", value: "1.90×" },
+            ].map((s, i) => (
+              <div key={i} className="rounded-2xl border border-white/10 bg-[#0f0f0f] p-6">
+                <div className="text-2xl md:text-4xl text-white font-semibold">{s.value}</div>
+                <div className="text-white/60 text-sm mt-2">{s.label}</div>
+              </div>
+            ))}
+          </div>
+          <div className="col-span-full md:col-start-2 md:col-end-6 mt-3">
+            <p className="text-xs text-white/40">
+              Past performance is not indicative of future results. Metrics shown are illustrative mock values.
+            </p>
+          </div>
+        </div>
         <div className="grid-system mt-8 md:mt-12 pb-16 md:pb-32">
           <div className="col-span-full md:col-start-2 md:col-end-6">
             <div className="flex gap-2 items-center mb-6">
@@ -95,10 +117,10 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Values Section */}
-      <section className="bg-white py-16 md:py-32">
+      <Section bgClass="bg-white" noTop>
         <TitleCard
           title="Our Values"
           description="The principles that guide every decision and action we take."
@@ -118,10 +140,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Timeline Section */}
-      <section className="bg-[#f8f8f8] py-16 md:py-32">
+      <Section bgClass="bg-[#f8f8f8]" noTop>
         <TitleCard
           title="Our Journey"
           description="Key milestones in building the future of private holdings."
@@ -148,24 +170,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-white py-16 md:py-32">
-        <div className="grid-system">
-          <div className="col-span-full md:col-start-2 md:col-end-6">
-            <div className="bg-c-black text-white rounded-3xl p-8 md:p-16 text-center">
-              <h2 className="text-3xl md:text-5xl 2xl:text-6xl font-semibold mb-6">
-                Join Our Journey
-              </h2>
-              <p className="text-xl md:text-2xl 2xl:text-3xl text-white/80 max-w-[50ch] mx-auto mb-8 md:mb-12">
-                Be part of building the next generation holding company.
-              </p>
-              <Button className="mx-auto">Get in Touch</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      </Section>
 
       <Footer />
     </div>

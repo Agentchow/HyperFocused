@@ -34,7 +34,7 @@ export default function Modal({
           <motion.section
             onClick={handleClick}
             key="opened"
-            className={`px-6  pt-8 pb-20 bg-[#111111] rounded-2xl max-w-xl relative hover:bg-[#222222] min-h-[600px] ${className}`}
+            className={`px-6  pt-8 pb-20 bg-[#111111] rounded-2xl max-w-xl relative hover:bg-[#222222] min-h-[600px] transition-all hover:ring-1 hover:ring-white/10 hover:-translate-y-0.5 ${className}`}
             layoutId={`${id}-card`}
           >
             <motion.h3

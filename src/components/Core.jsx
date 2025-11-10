@@ -5,17 +5,17 @@ export default function Core() {
   const sections = [
     {
       title: "Mission",
-      text: "To acquire, build, and scale high-margin digital and physical businesses in industries where AI innovation handles traditional inefficiency.",
+      text: "Create enduring value by acquiring founder-led companies and compounding operational improvements through technology, talent, and disciplined capital allocation.",
       Icon: MissionSvg,
     },
     {
       title: "Vision",
-      text: "To acquire, build, and scale high-margin digital and physical businesses in industries where AI innovation handles traditional inefficiency.",
+      text: "Be the most trusted partner to owners and investors by delivering consistent, risk-adjusted returns and building durable, people-first organizations.",
       Icon: VisionSvg,
     },
     {
       title: "Core Focus",
-      text: "To acquire, build, and scale high-margin digital and physical businesses in industries where AI innovation handles traditional inefficiency.",
+      text: "Target $250K–$2M EBITDA, succession‑ready businesses in fragmented markets; deploy AI-driven operating systems to unlock margin expansion and growth.",
       Icon: CoreSvg,
     },
   ];

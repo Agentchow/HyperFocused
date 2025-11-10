@@ -114,14 +114,54 @@ export default function Divisons() {
       description:
         "Brand and community ecosystem built around modern entrepreneurs and ADHD-driven achievement",
       Icon: <MediaSvg />,
-      content: "",
+      content: (
+        <section className="w-full">
+          <h3 className="text-lg font-Regular text-white/80 mb-6">
+            Media Growth Model
+            <span className="text-white/50"> (for Media Division)</span>
+          </h3>
+          <div className="grid gap-4">
+            {[
+              { k: "Channels", v: "YouTube, newsletter, podcast, social" },
+              { k: "Monetization", v: "Sponsorships, ads, courses, affiliates" },
+              { k: "Target Audience", v: "18–35 entrepreneurs & operators" },
+              { k: "North-Star KPIs", v: "Audience growth, LTV, CAC payback" },
+            ].map((row, i) => (
+              <div key={i} className="flex items-center justify-between border-b border-white/10 py-3">
+                <p className="text-white/90">{row.k}</p>
+                <p className="text-white/60">{row.v}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ),
     },
     {
       title: "HyperFocused Ventures",
       description:
         "Incubator for in-house startups in AI, SaaS, e-commerce, and automotive sectors.",
       Icon: <VentureSvg2 />,
-      content: "",
+      content: (
+        <section className="w-full">
+          <h3 className="text-lg font-Regular text-white/80 mb-6">
+            Venture Incubation
+            <span className="text-white/50"> (for Ventures Division)</span>
+          </h3>
+          <div className="grid gap-4">
+            {[
+              { k: "Focus", v: "B2B SaaS, AI tools, productized services" },
+              { k: "Stage", v: "0→1 incubation; spin-outs to stand-alone P&Ls" },
+              { k: "Model", v: "Shared infra (brand, ops, GTM, engineering)" },
+              { k: "Validation", v: "Pre-sell, payback < 6 months target" },
+            ].map((row, i) => (
+              <div key={i} className="flex items-center justify-between border-b border-white/10 py-3">
+                <p className="text-white/90">{row.k}</p>
+                <p className="text-white/60">{row.v}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ),
     },
   ];
   return (
@@ -253,6 +293,13 @@ export default function Divisons() {
         <div className="col-span-full lg:col-start-2 lg:col-end-6 gap-4 grid lg:grid-cols-2">
           <ForecastChart />
           <ForecastHistogram />
+        </div>
+      </section>
+      <section className="grid-system mt-4">
+        <div className="col-span-full lg:col-start-2 lg:col-end-6">
+          <p className="text-xs text-white/40">
+            Forward-looking statements are inherently uncertain and subject to risks and assumptions. Figures shown are illustrative mock values and do not guarantee future performance.
+          </p>
         </div>
       </section>
       <section className="grid-system mt-16">

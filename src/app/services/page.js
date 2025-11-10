@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 import { VentureSvg, VisionSvg } from "../../../helpers/icons";
 import TitleCard from "@/components/TitleCard";
+import Section from "@/components/ui/section";
+import CaseStudies from "@/components/CaseStudies";
 
 export const metadata = {
   title: "Services | Hyperfocused Holdings",
@@ -20,6 +22,9 @@ export default function ServicesPage() {
         "Strategic integration planning",
         "Post-acquisition support",
       ],
+      audience: "Owners seeking succession or liquidity; intermediaries (bankers/brokers)",
+      engagement: "30–90 day diligence → 30–60 day close",
+      outcomes: "Seamless transition, preserved legacy, optimized capital structure",
     },
     {
       title: "AI-Driven Optimization",
@@ -30,6 +35,9 @@ export default function ServicesPage() {
         "Performance analytics",
         "Continuous optimization",
       ],
+      audience: "Portfolio operators and management teams",
+      engagement: "8–12 week sprints with KPI-driven roadmap",
+      outcomes: "EBITDA margin expansion, improved throughput, reduced working capital needs",
     },
     {
       title: "Portfolio Management",
@@ -40,6 +48,9 @@ export default function ServicesPage() {
         "Performance monitoring",
         "Resource allocation",
       ],
+      audience: "Majority and minority positions; platform and add‑on companies",
+      engagement: "Monthly operating rhythm; quarterly value creation reviews",
+      outcomes: "Consistent revenue CAGR, risk reduction, scalable processes",
     },
     {
       title: "Brand Development",
@@ -50,6 +61,9 @@ export default function ServicesPage() {
         "Marketing campaigns",
         "Community building",
       ],
+      audience: "Early-stage ventures and mature PE-backed businesses",
+      engagement: "4–8 week brand system; ongoing content engine",
+      outcomes: "Demand generation, pricing power, higher close rates",
     },
     {
       title: "Capital Allocation",
@@ -60,6 +74,9 @@ export default function ServicesPage() {
         "Capital efficiency",
         "ROI optimization",
       ],
+      audience: "Investment committees and executive teams",
+      engagement: "Continuous; tied to portfolio operating cadence",
+      outcomes: "Optimized ROIC, disciplined deployment, balanced risk",
     },
     {
       title: "Scaling Solutions",
@@ -70,6 +87,9 @@ export default function ServicesPage() {
         "Infrastructure development",
         "Team building",
       ],
+      audience: "High-potential companies preparing for multi-region expansion",
+      engagement: "6–12 month scale-up programs",
+      outcomes: "New market entry, revenue growth, durable operating leverage",
     },
   ];
 
@@ -111,7 +131,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="bg-[#f8f8f8] py-16 md:py-32">
+      <Section bgClass="bg-[#f8f8f8]" noTop>
         <TitleCard
           title="What We Offer"
           description="End-to-end solutions for business acquisition, optimization, and growth."
@@ -136,14 +156,19 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
+                <div className="mt-6 grid gap-2 text-c-black/70">
+                  <p><span className="font-semibold text-c-black/90">Who it’s for:</span> {service.audience}</p>
+                  <p><span className="font-semibold text-c-black/90">Typical engagement:</span> {service.engagement}</p>
+                  <p><span className="font-semibold text-c-black/90">Expected outcomes:</span> {service.outcomes}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Divisions Section */}
-      <section className="bg-c-black text-white rounded-t-3xl py-16 md:py-32">
+      <Section bgClass="bg-c-black text-white rounded-t-3xl" noTop>
         <TitleCard
           title="Three Core Divisions"
           titleClassName="text-white/60"
@@ -174,10 +199,20 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
+
+      {/* Case Studies */}
+      <Section bgClass="bg-white" noTop>
+        <TitleCard
+          title="Selected Case Studies"
+          description="Brief snapshots of value creation across sectors."
+          tagline="PROVEN OUTCOMES"
+        />
+        <CaseStudies />
+      </Section>
 
       {/* Process Section */}
-      <section className="bg-white py-16 md:py-32">
+      <Section bgClass="bg-white" noTop>
         <TitleCard
           title="Our Process"
           description="A proven framework for transforming businesses through systematic execution."
@@ -200,24 +235,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-[#f8f8f8] py-16 md:py-32">
-        <div className="grid-system">
-          <div className="col-span-full md:col-start-2 md:col-end-6">
-            <div className="bg-c-black text-white rounded-3xl p-8 md:p-16 text-center">
-              <h2 className="text-3xl md:text-5xl 2xl:text-6xl font-semibold mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl md:text-2xl 2xl:text-3xl text-white/80 max-w-[50ch] mx-auto mb-8 md:mb-12">
-                Let's discuss how we can help you achieve your business goals.
-              </p>
-              <Button className="mx-auto">Contact Us Today</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      </Section>
 
       <Footer />
     </div>

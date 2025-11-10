@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import Link from "next/link";
 export default function Hero() {
   return (
     <div className="min-h-screen w-full flex flex-col text-c-black pt-32">
@@ -56,11 +57,10 @@ export default function Hero() {
           <h2 className="text-center mt-4 md:mt-6 md:text-2xl max-w-xs mx-auto lg:max-w-full">
             Hyper-Focused Execution. Multi-Dimensional Growth.
           </h2>
-          <Button className="mt-8 md:mt-12">View Business Plan</Button>
           <div className="grid-system mt-12">
             <p className="md:col-start-2 md:col-end-5 xl:col-end-4 col-span-full md:text-lg lg:text-2xl 2xl:text-3xl max-w-[40ch] mr-auto md:mt-16">
-              Acquiring, building, and scaling high-margin digital and physical
-              businesses where AI innovation handles traditional inefficiency.
+              Acquiring, building, and scaling founder-led, succession‑ready businesses in the US and Canada.
+              Targeting $250K–$2M EBITDA with AI-driven value creation.
             </p>
           </div>
         </div>

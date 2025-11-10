@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -21,11 +22,12 @@ export default function Footer() {
                 <div className="flex items-center gap-2 mb-4">
                   <p className="text-base text-[#0b0b0b]">Navigation</p>
                 </div>
-                <div className="space-y-2 text-sm text-[rgba(11,11,11,0.6)]">
-                  <p>Navigation-1</p>
-                  <p>Navigation-2</p>
-                  <p>Navigation-3</p>
-                </div>
+                <ul className="space-y-2 text-sm text:[rgba(11,11,11,0.6)]">
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/about">About</Link></li>
+                  <li><Link href="/services">Services</Link></li>
+                  <li><Link href="/case-studies">Case Studies</Link></li>
+                </ul>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-4">
@@ -41,11 +43,10 @@ export default function Footer() {
                 <div className="flex items-center gap-2 mb-4">
                   <p className="text-base text-[#0b0b0b]">Connect</p>
                 </div>
-                <div className="space-y-2 text-sm text-[rgba(11,11,11,0.6)]">
-                  <p>Skool Community</p>
-                  <p>Discord</p>
-                  <p>LinkedIn</p>
-                </div>
+                <ul className="space-y-2 text-sm text-[rgba(11,11,11,0.6)]">
+                  <li><Link href="#">Privacy Policy</Link></li>
+                  <li><Link href="#">Disclosures</Link></li>
+                </ul>
               </div>
             </div>
 
